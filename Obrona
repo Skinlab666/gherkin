@@ -1,0 +1,65 @@
+Feature: Funkcjonalność: logowanie do aplikacji 
+
+  Scenario: Jestem niezalogowanym użytkownikiem, chciałbym zalogować się na stronie na swoje konto Mollon Pro
+  
+    Given Jestem na głównej stronie gdzie jest pole logowania
+     When Wpisuję pawelwo79@gmail.com w polu email
+     Then Wpisuję !Tester12345 w polu hasło
+      And Klikam na potwierdzenie Captcha i "zaloguj się"
+     Then jestem zalogowany
+      And Mogę dodać produkty do koszyka
+  
+  Example: 
+  
+      | Nazwa konta email | Hasło konta | Typ konta    | 
+      | email uzytkownika | hasło       | konto gościa | 
+  
+  
+  
+  
+  Kod Java:
+  
+  package my.package.name
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.And;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+public class MyStepDefinitions {
+
+    @Given("^Jestem na głównej stronie gdzie jest pole logowania$")
+    public void jestem_na_gwnej_stronie_gdzie_jest_pole_logowania() throws Throwable {
+        throw new PendingException();
+    }
+
+    @When("^Wpisuję pawelwo79@gmail\.com w polu email$")
+    public void wpisuj_pawelwo79gmailcom_w_polu_email() throws Throwable {
+        throw new PendingException();
+    }
+
+    @Then("^Wpisuję !Tester12345 w polu hasło$")
+    public void wpisuj_tester12345_w_polu_haso() throws Throwable {
+        throw new PendingException();
+    }
+
+    @Then("^jestem zalogowany$")
+    public void jestem_zalogowany() throws Throwable {
+        throw new PendingException();
+    }
+
+    @And("^Klikam na potwierdzenie Captcha i \"([^\"]*)\"$")
+    public void klikam_na_potwierdzenie_captcha_i_something(String strArg1) throws Throwable {
+        throw new PendingException();
+    }
+
+    @And("^Mogę dodać produkty do koszyka$")
+    public void mog_doda_produkty_do_koszyka() throws Throwable {
+        throw new PendingException();
+    }
+
+}
